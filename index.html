@@ -3,10 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Landing Page</title>
+  <title>Your Product</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #000;
+      color: white;
+    }
+    .hero iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 2rem;
+    }
+    .features {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .features h2 {
+      text-align: center;
+    }
+    .features ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+    .cta {
+      text-align: center;
+      margin: 3rem 0;
+    }
+    .cta button {
+      background-color: #ff5a5f;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cta button:hover {
+      background-color: #e0494f;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to My Product</h1>
-  <p>This is a simple landing page hosted on GitHub Pages.</p>
+
+  <section class="hero">
+    <h1>Discover Our Amazing Product</h1>
+    <p>Watch the video to see how it can help you</p>
+    <!-- Replace with your own video link -->
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </section>
+
+  <section class="features">
+    <h2>Key Features</h2>
+    <ul>
+      <li>Instant access to our exclusive tool</li>
+      <li>Step-by-step guide for beginners</li>
+      <li>Boosts your productivity with AI</li>
+      <li>Includes free updates for life</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <button onclick="window.location.href='form.html'">Get Started</button>
+  </div>
+
 </body>
 </html>
