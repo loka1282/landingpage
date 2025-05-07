@@ -3,57 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your AI eBook – Get Early Access</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Free Ebook: AI-Powered Passive Income</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .fade-in { animation: fadeIn 1s ease-in forwards; opacity: 0; }
-    @keyframes fadeIn { to { opacity: 1; } }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1s ease-out;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    input[type="email"] {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    button {
+      padding: 12px 25px;
+      border: none;
+      background-color: #ff6b6b;
+      color: white;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #ff4757;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
-<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center p-4">
-  <div class="max-w-xl w-full fade-in">
-    <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl">
-      <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center">📘 Free AI eBook</h1>
-      <p class="text-gray-300 mb-6 text-center">Discover how to build passive income with AI. Sign up and get instant access when we launch.</p>
-      
-      <form action="YOUR_SCRIPT_URL_HERE" method="POST" id="emailForm" class="space-y-4">
-        <input type="email" name="email" placeholder="Enter your email" required
-               class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-        
-        <button type="submit"
-                class="w-full bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-3 rounded-lg font-semibold text-white">
-          🚀 Get Early Access
-        </button>
-      </form>
-      
-      <p id="successMsg" class="text-green-400 mt-4 hidden text-center">Thank you! We'll keep you posted 📬</p>
-      <p class="text-sm text-gray-500 mt-6 text-center">No spam. Unsubscribe anytime.</p>
-    </div>
-  </div>
-
-  <script>
-    const form = document.getElementById('emailForm');
-    const successMsg = document.getElementById('successMsg');
+<body>
+  <div class="container">
+    <h1>📘 Get the Free Ebook</h1>
+    <p>Discover how to build <strong>AI-powered passive income systems</strong> with just ₹3000 and scale up to ₹1 Lakh/month. No fluff – real, actionable steps.</p>
     
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: formData
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          successMsg.classList.remove('hidden');
-        } else {
-          alert('Something went wrong. Please try again.');
-        }
-      }).catch(error => {
-        alert('Error: ' + error.message);
-      });
-    });
-  </script>
+    <form action="https://script.google.com/macros/s/AKfycbyblToBoin_rF8Yokta8PidGnJKvRa6-2GRPO8eRQXIzLu2q5KvziadfcFcoQERX0qG-Q/exec" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit">🚀 Send Me the Ebook</button>
+    </form>
+  </div>
 </body>
 </html>
