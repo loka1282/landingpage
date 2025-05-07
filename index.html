@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Ebook: AI-Powered Passive Income</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Tools for Digital Marketers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   <style>
     * {
       box-sizing: border-box;
@@ -13,74 +13,108 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: linear-gradient(to right, #ff6a00, #ee0979);
       color: #fff;
-      min-height: 100vh;
+      padding: 40px 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
-      padding: 20px;
+      align-items: center;
+      min-height: 100vh;
     }
     .container {
-      background-color: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.1);
       padding: 40px;
       border-radius: 20px;
-      max-width: 500px;
+      max-width: 800px;
       width: 100%;
       text-align: center;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-      animation: fadeIn 1s ease-out;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     }
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 15px;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
     }
-    p {
-      font-size: 1.1rem;
+    p.description {
+      font-size: 1.2rem;
       margin-bottom: 30px;
-      line-height: 1.5;
+    }
+    video {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+    ul.features {
+      text-align: left;
+      margin: 20px auto 30px;
+      max-width: 600px;
+      font-size: 1.1rem;
+    }
+    ul.features li {
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 25px;
+    }
+    ul.features li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      top: 0;
     }
     input[type="email"] {
-      padding: 12px;
-      border: none;
+      padding: 14px;
       border-radius: 8px;
+      border: none;
       width: 100%;
+      max-width: 400px;
       margin-bottom: 20px;
       font-size: 1rem;
     }
     button {
-      padding: 12px 25px;
-      border: none;
-      background-color: #ff6b6b;
-      color: white;
+      padding: 14px 30px;
       font-size: 1rem;
+      border: none;
       border-radius: 8px;
+      background-color: #00c9a7;
+      color: #fff;
       cursor: pointer;
       transition: background 0.3s ease;
     }
     button:hover {
-      background-color: #ff4757;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      background-color: #00b28f;
     }
     @media (max-width: 600px) {
-      .container {
-        padding: 30px 20px;
-      }
+      h1 { font-size: 2rem; }
+      .container { padding: 30px 20px; }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>📘 Get the Free Ebook</h1>
-    <p>Discover how to build <strong>AI-powered passive income systems</strong> with just ₹3000 and scale up to ₹1 Lakh/month. No fluff – real, actionable steps.</p>
-    
-    <form action="https://script.google.com/macros/s/AKfycbyblToBoin_rF8Yokta8PidGnJKvRa6-2GRPO8eRQXIzLu2q5KvziadfcFcoQERX0qG-Q/exec" method="POST">
+    <h1>🚀 Boost Your Marketing with AI</h1>
+    <p class="description">Download our exclusive <strong>Prompt List Bundle</strong> + <strong>n8n Workflows</strong> for digital marketers, creators & entrepreneurs.</p>
+
+    <!-- Replace video.mp4 with your actual video file -->
+    <video controls poster="thumbnail.jpg">
+      <source src="video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <ul class="features">
+      <li>🎯 100+ ChatGPT prompts tailored for digital marketing</li>
+      <li>🤖 Pre-built n8n workflows to automate lead gen & follow-up</li>
+      <li>🧠 Boost content creation, ads, SEO & email funnels with AI</li>
+      <li>🔗 Instant access, no coding required</li>
+    </ul>
+
+    <form 
+      action="https://script.google.com/macros/s/AKfycbyblToBoin_rF8Yokta8PidGnJKvRa6-2GRPO8eRQXIzLu2q5KvziadfcFcoQERX0qG-Q/exec"
+      method="POST"
+      onsubmit="setTimeout(() => { window.location.href='https://gumroad.com'; }, 2000);"
+    >
       <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">🚀 Send Me the Ebook</button>
+      <br/>
+      <button type="submit">📩 Get Instant Access</button>
     </form>
   </div>
 </body>
