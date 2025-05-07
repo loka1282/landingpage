@@ -2,82 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Product</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your AI eBook – Get Early Access</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-      background: #000;
-      color: white;
-    }
-    .hero iframe {
-      width: 90%;
-      max-width: 800px;
-      height: 450px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 2rem;
-    }
-    .features {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    .features h2 {
-      text-align: center;
-    }
-    .features ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-    }
-    .cta {
-      text-align: center;
-      margin: 3rem 0;
-    }
-    .cta button {
-      background-color: #ff5a5f;
-      border: none;
-      color: white;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .cta button:hover {
-      background-color: #e0494f;
-    }
+    body { font-family: 'Inter', sans-serif; }
+    .fade-in { animation: fadeIn 1s ease-in forwards; opacity: 0; }
+    @keyframes fadeIn { to { opacity: 1; } }
   </style>
 </head>
-<body>
-
-  <section class="hero">
-    <h1>Discover Our Amazing Product</h1>
-    <p>Watch the video to see how it can help you</p>
-    <!-- Replace with your own video link -->
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
-
-  <section class="features">
-    <h2>Key Features</h2>
-    <ul>
-      <li>Instant access to our exclusive tool</li>
-      <li>Step-by-step guide for beginners</li>
-      <li>Boosts your productivity with AI</li>
-      <li>Includes free updates for life</li>
-    </ul>
-  </section>
-
-  <div class="cta">
-    <button onclick="window.location.href='form.html'">Get Started</button>
+<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-xl w-full fade-in">
+    <div class="bg-gray-900 p-8 rounded-2xl shadow-2xl">
+      <h1 class="text-3xl sm:text-4xl font-bold mb-4 text-center">📘 Free AI eBook</h1>
+      <p class="text-gray-300 mb-6 text-center">Discover how to build passive income with AI. Sign up and get instant access when we launch.</p>
+      
+      <form action="YOUR_SCRIPT_URL_HERE" method="POST" id="emailForm" class="space-y-4">
+        <input type="email" name="email" placeholder="Enter your email" required
+               class="w-full px-4 py-3 rounded-lg bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        
+        <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 transition-colors px-4 py-3 rounded-lg font-semibold text-white">
+          🚀 Get Early Access
+        </button>
+      </form>
+      
+      <p id="successMsg" class="text-green-400 mt-4 hidden text-center">Thank you! We'll keep you posted 📬</p>
+      <p class="text-sm text-gray-500 mt-6 text-center">No spam. Unsubscribe anytime.</p>
+    </div>
   </div>
 
+  <script>
+    const form = document.getElementById('emailForm');
+    const successMsg = document.getElementById('successMsg');
+    
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      }).then(response => {
+        if (response.ok) {
+          form.reset();
+          successMsg.classList.remove('hidden');
+        } else {
+          alert('Something went wrong. Please try again.');
+        }
+      }).catch(error => {
+        alert('Error: ' + error.message);
+      });
+    });
+  </script>
 </body>
 </html>
