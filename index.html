@@ -13,7 +13,7 @@
     }
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #7f2de5, #9c27b0);
+      background: linear-gradient(to right, #4e73df, #1cc88a);
       color: white;
       padding: 50px 20px;
       display: flex;
@@ -34,12 +34,12 @@
     h1 {
       font-size: 2.5rem;
       margin-bottom: 20px;
-      color: yellow;
+      color: #f8b400; /* Orange for high conversion */
     }
     p.description {
       font-size: 1.2rem;
       margin-bottom: 30px;
-      color: royalblue;
+      color: #6c757d; /* Greyish for readability */
     }
     video {
       width: 100%;
@@ -77,24 +77,24 @@
       font-size: 1rem;
       border: none;
       border-radius: 8px;
-      background-color: #ffcc00;
-      color: royalblue;
+      background-color: #ff6b6b; /* Red for urgency */
+      color: white;
       cursor: pointer;
       transition: background 0.3s ease;
     }
     button:hover {
-      background-color: #ffb300;
+      background-color: #ff4757;
     }
     .reviews {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 2px solid royalblue;
+      border-top: 2px solid #007bff;
     }
     .review {
       margin-bottom: 30px;
     }
     .review .stars {
-      color: yellow;
+      color: #ffcc00;
       font-size: 1.5rem;
     }
     .review p {
@@ -103,7 +103,16 @@
     }
     .reviewer-name {
       font-weight: bold;
-      color: royalblue;
+      color: #007bff; /* Royal Blue */
+    }
+    .images {
+      margin-top: 40px;
+    }
+    .images img {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+      border-radius: 10px;
     }
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
@@ -114,9 +123,9 @@
 <body>
   <div class="container">
     <h1>🚀 Boost Your Marketing with AI</h1>
-    <p class="description">Download our exclusive <strong>Prompt List Bundle</strong> + <strong>n8n Workflows</strong> for digital marketers, creators & entrepreneurs.</p>
+    <p class="description">Get the ultimate <strong>Prompt List Bundle</strong> and <strong>n8n Workflows</strong> for digital marketers, creators, and entrepreneurs. Save time and maximize your ROI!</p>
 
-    <!-- Replace video.mp4 with your actual video file -->
+    <!-- Sample Video Section -->
     <video controls poster="thumbnail.jpg">
       <source src="video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
@@ -128,6 +137,18 @@
       <li>🧠 Boost content creation, ads, SEO & email funnels with AI</li>
       <li>🔗 Instant access, no coding required</li>
     </ul>
+
+    <!-- Sample Images for n8n Workflow, AI Prompt & AI Reels -->
+    <div class="images">
+      <h2>🔧 Sample n8n Workflow</h2>
+      <img src="n8n-workflow-sample.jpg" alt="n8n workflow example" />
+      
+      <h2>📝 Sample AI Prompt Bundle</h2>
+      <img src="ai-prompt-sample.jpg" alt="AI Prompt Example" />
+
+      <h2>🎥 Sample AI Reels Content</h2>
+      <img src="ai-reels-sample.jpg" alt="AI Reels Example" />
+    </div>
 
     <form id="ebookForm" action="https://script.google.com/macros/s/AKfycbyblToBoin_rF8Yokta8PidGnJKvRa6-2GRPO8eRQXIzLu2q5KvziadfcFcoQERX0qG-Q/exec" method="POST" onsubmit="handleFormSubmit(event)">
       <input type="email" name="email" placeholder="Enter your email" required />
@@ -177,7 +198,7 @@
       }).then(response => {
         if (response.ok) {
           // Redirect to Gumroad after successful form submission
-          window.location.href = "https://gumroad.com";
+          window.location.href = "https:/gumroad.com";
         } else {
           alert("Something went wrong. Please try again.");
         }
